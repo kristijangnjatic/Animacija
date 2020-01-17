@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Animacija</title>
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+            background:#050210;
+           
+        }
+
+    
+
+        #ring{
+            background:linear-gradient(#fb5dad, #55fb9f, #b97aff);
+            position: relative;
+            border-radius: 50%;
+            width: 500px;
+            height: 500px;
+            margin: 200px auto;
+            
+            filter: blur(1px);
+            animation: myanimation 1s linear infinite;
+            
+            }
+    
+            @keyframes myanimation{
+             0%{
+                 transform: rotate(0deg);
+             }
+             40%{
+                 transform: rotate(120deg);
+             }
+             80%{
+                 transform: rotate(240deg);
+             }
+             100%{
+                 transform: rotate(360deg);
+             }
+            }
+            #back{
+            background: black;
+            border-radius: 50%;
+            width: 400px;
+            height: 400px;
+            margin: 0 auto;
+            transform: translateY(50px);
+            position: relative;
+            }
+            #pulse{
+                
+                width: 2px;
+                height: 2px;
+                margin: 0 auto;
+                background: rgba(155, 155, 151, 0);                
+                transform: translateY(-456px);
+                border-radius: 50%;
+                animation: puls 1s linear infinite;
+
+             }
+         
+        
+           
+            @keyframes puls{
+                0%{
+                    box-shadow: 0 0 0 50px rgba(90, 88, 88, 0.719);
+                }
+                25%{
+                    box-shadow: 0 0 0 100px rgba(77, 76, 76, 0.747);
+                }
+                50%{
+                    box-shadow: 0 0 0 150px rgba(44, 44, 44, 0.849);
+                }
+                100%{
+                    box-shadow: 0 0 0 200px rgba(10, 10, 10, 0.884);
+                }
+            }
+         
+    </style>
+</head>
+<body>
+    
+
+        <div id="ring">
+            <div id="back">
+               
+
+            </div><!--end back-->
+          
+            
+         </div><!--end ring-->
+            <div id="pulse"></div>
+
+       
+
+
+</body>
+</html>
